@@ -11,25 +11,97 @@
       <div class="navbar-brand">
         <h1 class="logo">loGO</h1>
       </div>
-      <div class="navbar-nav">
+      <div class="navbar-toggle" id="navbarToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="navbar-nav" id="navbarNav">
         <a href="#" class="nav-link" id="home">Home</a>
         <a href="#" class="nav-link" id="tvshow">About Us</a>
         <a href="#" class="nav-link" id="movies">Contact</a>
         <a href="#" class="nav-link" id="news">Services</a>
-        <button class="btn">Sign Up</button></a>
+        <button class="btn">Sign Up</button>
       </div>
+      <script>
+        const toggle = document.getElementById('navbarToggle');
+        const nav = document.getElementById('navbarNav');
+        toggle.onclick = function() {
+          nav.classList.toggle('active');
+          toggle.classList.toggle('active');
+        }
+      </script>
+      <style>
+        .navbar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .navbar-nav {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          list-style: none;
+          gap: 1rem;
+        }
+        .navbar-toggle {
+          display: none;
+          flex-direction: column;
+          cursor: pointer;
+          width: 30px;
+          height: 25px;
+          justify-content: space-between;
+        }
+        .navbar-toggle span {
+          display: block;
+          height: 4px;
+          background: #333;
+          border-radius: 2px;
+          transition: 0.3s;
+        }
+        @media (max-width: 768px) {
+      
+          .navbar-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 1rem;
+        z-index: 100;
+          }
+          .navbar-nav.active {
+        display: flex;
+          }
+          .navbar-toggle {
+        display: flex;
+          }
+        }
+        .navbar-toggle.active span:nth-child(1) {
+          transform: translateY(10px) rotate(45deg);
+        }
+        .navbar-toggle.active span:nth-child(2) {
+          opacity: 0;
+        }
+        .navbar-toggle.active span:nth-child(3) {
+          transform: translateY(-10px) rotate(-45deg);
+        }
+      </style>
+      
     </nav>
 
     <!-- hero section -->
     <div class="hero">
       <div class="container">
         <div class="box">
+          <div class="image"><img src="unnamed.png" alt=""></div>
           <h1>Welcome</h1>
           <p>Lorem ipsum dolor sit amet consectetur bradipisicing elit. Cumque, expedita, corrupti dolorem, doloremque ratione suscipit dolores minima vel facilis fugiat rem quae earum obcaecati sit porro! Non delectus minima consequatur reprehenderit dolorum illum voluptatum est eveniet recusandae aut eos ullam et, explicabo obcaecati, officia quod quas, amet in corporis iste? <img src="" alt=""></p>
           <button class="btn" >Explore</button>
         </div>
       </div>
-      <div class="image"><img src="unnamed.png" alt=""></div>
     </div>
 
 
@@ -57,9 +129,9 @@
     <div class="footer-col">
       <h4>Follow Us</h4>
       <div class="social-links">
-        <img src="instagram.png" alt=""></a><br />
-        <img src="facebook.png" alt=""></a><br />
-        <img src="github.png" alt=""></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="github.png" alt="GitHub"></a>
       </div>
     </div>
   </div>
