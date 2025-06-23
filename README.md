@@ -47,14 +47,14 @@ Horizon Web is a visually engaging and fully adaptable website template featurin
 
 ## 📁 File Structure
 project-folder/
-'''
+```
 │
 ├── index.html # Core HTML structure
 ├── style.css # Styling and responsive design
 ├── script.js # JavaScript for navigation toggle
 ├── images/ # Placeholder for image assets (logo, icons)
 └── README.md # Project details
-''''
+```
 
 ---
 
